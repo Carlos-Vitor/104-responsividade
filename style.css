@@ -4,6 +4,7 @@ body{
     grid-template-areas: 'navbar navbar navbar navbar' 'section section aside aside'
     'footer footer footer footer';
     grid-template-rows: 15vh 60vh 30vh;
+    grid-template-columns: 24.7vw 24.7vw 24.7vw 24.7vw;
 }
 
 nav{
@@ -21,18 +22,53 @@ nav a{
     font-size: 16pt;
 }
 
-section{
-    grid-area: section;
-    background-color: orange;  
+nav a :hover{
+    text-decoration: underline;
 }
+
+section{
+    display: flex;
+    grid-area: section;
+    background-color: orange;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+}
+
+section img{
+    border-radius: 100%;
+}
+
 aside{
+    display: flex;
+    justify-content: center;
     grid-area: aside;
     background-color: orangered;
+    align-items: center;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
 
 footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     grid-area: footer;
     background-color: blueviolet;
+}
+
+#imagens{
+    display: flex;
+    justify-content: space-around;
+    height: 4vw;
+    width: 30vw;
+}
+
+#links{
+    display: flex;
+    justify-content: space-around;
+    width: 90vw;
 }
 
 #menuHamburguer{
@@ -80,13 +116,11 @@ footer{
     
     body{
         grid-template-areas: 'navbar navbar navbar navbar' 'section section section section'
-        'footer footer footer footer';
-        grid-template-rows: 15vh 60vh 20vh;
+        'aside aside aside aside' 'footer footer footer footer';
+        grid-template-rows: 15vh 60vh 60vh 20vh;
         
     }
-    aside{
-        grid-area: unset;
-    }
+    
 }
 
 
